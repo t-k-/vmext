@@ -13,7 +13,7 @@
   "scripts": {
     "start": "nodemon --ignore public/ server.js",
     "debug": "nodemon --ignore public/ --inspect server.js",
-    "coverage": "istanbul cover _mocha -- -R spec",
+    "coverage": "nsp check && istanbul cover _mocha -- -R spec",
     "test": "PREQ_CONNECT_TIMEOUT=15 mocha && nsp check",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "eslint .",
